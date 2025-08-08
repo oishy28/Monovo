@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import WindowAnimation from './WindowAnimation';
-import SplitText from './SplitText';
+import WindowAnimation from '../../animations/WindowAnimation';
+import SplitText from '../../interactive/SplitText';
 import { toast } from 'react-toastify';
-import { supabase } from '../supabaseClient';
+import { supabase } from '../../../supabaseClient';
 
 export default function SignupForm({ setUser, setAuthState }) {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ export default function SignupForm({ setUser, setAuthState }) {
         body: JSON.stringify(data)
       });
 
-      const result = await response.text(); // 🔄 handle plain text response
+      const result = await response.text(); // 
 
       if (response.ok) {
         console.log('Signup success:', result);

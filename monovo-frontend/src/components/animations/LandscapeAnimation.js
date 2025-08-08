@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import landscape from "../assets/Landscape.json";
+import landscape from "../../assets/Landscape.json";
 
 export default function LandscapeAnimation() {
   return (
