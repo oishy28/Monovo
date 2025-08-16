@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import LandscapeAnimation from './LandscapeAnimation';
-import SplitText from './SplitText';
+import LandscapeAnimation from '../../animations/LandscapeAnimation';
+import SplitText from '../../../components/interactive/SplitText';
 import { toast } from 'react-toastify';
-import { supabase } from '../supabaseClient';
+import { supabase } from '../../../supabaseClient';
 
 export default function SigninForm({ setUser, setAuthState }) {
   const navigate = useNavigate();

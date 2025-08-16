@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import window from "../assets/Window.json";
+import window from "../../assets/Window.json";
 
 export default function WindowAnimation() {
   return (
