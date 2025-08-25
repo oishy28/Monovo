@@ -20,7 +20,8 @@ public class SecurityConfig {
             .cors(Customizer.withDefaults())  // 🔹 Enable CORS
             .csrf(csrf -> csrf.disable())     // 🔹 Disable CSRF for Postman/frontend testing
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/auth/**").permitAll()                
+                .requestMatchers("/api/profile/**").permitAll()   
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());
